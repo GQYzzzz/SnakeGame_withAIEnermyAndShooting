@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dms.controller.FeedbackController">
+   <children>
+      <ImageView fitHeight="628.0" fitWidth="900.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../game/background/UI-background-feedback.jpeg" />
+         </image>
+         <effect>
+            <Glow level="1.0" />
+         </effect></ImageView>
+      <Label layoutX="480.0" layoutY="120.0" text="Enter your feedback here : ">
+         <font>
+            <Font name="Annai MN Regular" size="28.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.4109263657957245" endY="1.0" startX="0.4133016627078384" startY="0.2660332541567696">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9210526347160339" green="0.37097951769828796" blue="0.37097951769828796" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <effect>
+            <DropShadow spread="0.29" />
+         </effect>
+      </Label>
+      <TextArea fx:id="feedback" layoutX="482.0" layoutY="240.0" opacity="0.7" prefHeight="167.0" prefWidth="366.0">
+         <effect>
+            <SepiaTone />
+         </effect>
+      </TextArea>
+      <Button layoutX="160.0" layoutY="500.0" mnemonicParsing="false" onAction="#onBackClick" prefHeight="47.0" prefWidth="110.0" text="Back">
+         <font>
+            <Font size="23.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Button>
+      <Button layoutX="605.0" layoutY="500.0" mnemonicParsing="false" onAction="#onSubmitClick" prefHeight="47.0" prefWidth="117.0" text="Submit">
+         <font>
+            <Font size="23.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Button>
+      <Label fx:id="prompt" layoutX="530.0" layoutY="438.0" prefHeight="28.0" prefWidth="296.0" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="180.0" layoutY="118.0" text="Help : ">
+         <font>
+            <Font name="Annai MN Regular" size="28.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.40617577197149646" endY="0.8954869358669834" startX="0.4038004750593824" startY="0.30403800475059384">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9210526347160339" green="0.37097951769828796" blue="0.37097951769828796" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <effect>
+            <DropShadow spread="0.3" />
+         </effect>
+      </Label>
+      <ImageView fitHeight="232.0" fitWidth="416.0" layoutX="20.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../game/background/keyboard.png" />
+         </image></ImageView>
+   </children>
+</AnchorPane>

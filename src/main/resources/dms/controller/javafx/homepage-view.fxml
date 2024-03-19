@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="628.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dms.controller.HomePageController">
+   <children>
+      <ImageView fx:id="homeBackground" fitHeight="628.0" fitWidth="900.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../game/background/snake-background.jpg" />
+         </image></ImageView>
+      <Button layoutX="38.0" layoutY="540.0" mnemonicParsing="false" onAction="#onButtonExitClick" prefHeight="31.0" prefWidth="64.0" text="Exit">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Button>
+      <VBox alignment="CENTER" layoutX="120.0" layoutY="75.0" prefHeight="460.0" prefWidth="679.0" spacing="20.0">
+          <padding>
+              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+          </padding>
+      
+          <Label fx:id="welcomeText" prefHeight="97.0" prefWidth="633.0" text="Welcome to the Snake Game!">
+            <font>
+               <Font name="Annai MN Regular" size="45.0" />
+            </font>
+            <textFill>
+               <RadialGradient centerX="0.4889196675900277" centerY="0.5" focusDistance="-0.023121387283236983" radius="0.546242774566474">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.8157894611358643" green="0.7478070259094238" blue="0.7478070259094238" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </RadialGradient>
+            </textFill>
+            <effect>
+               <Lighting specularConstant="0.98" specularExponent="26.47" surfaceScale="10.0">
+                  <bumpInput>
+                     <BoxBlur height="7.95" iterations="3" />
+                  </bumpInput>
+                  <light>
+                     <Light.Distant />
+                  </light>
+               </Lighting>
+            </effect></Label>
+         <ImageView fx:id="snakeLogo" fitHeight="103.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../game/background/game-logo.png" />
+            </image></ImageView>
+         <HBox prefHeight="39.0" prefWidth="521.0">
+            <children>
+               <Label prefHeight="41.0" prefWidth="282.0" text="     Enter your name : " textFill="#facc00">
+                  <font>
+                     <Font name="Annai MN Regular" size="25.0" />
+                  </font>
+                  <effect>
+                     <DropShadow spread="0.35" />
+                  </effect>
+               </Label>
+               <TextField fx:id="nameField" blendMode="LIGHTEN" prefHeight="7.0" prefWidth="218.0">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+                  <effect>
+                     <SepiaTone />
+                  </effect>
+               </TextField>
+            </children>
+         </HBox>
+         <Label fx:id="prompt" prefHeight="44.0" prefWidth="291.0" textFill="#fff1b1">
+            <font>
+               <Font size="19.0" />
+            </font></Label>
+         <HBox prefHeight="70.0" prefWidth="369.0">
+            <children>
+               <Label prefHeight="66.0" prefWidth="107.0" />
+                <Button onAction="#onRankClick" prefHeight="60.0" prefWidth="177.0" text="Rank Board">
+                  <font>
+                     <Font size="24.0" />
+                  </font>
+                  <effect>
+                     <BoxBlur height="0.0" iterations="3" width="0.0">
+                        <input>
+                           <SepiaTone />
+                        </input>
+                     </BoxBlur>
+                  </effect>
+               </Button>
+               <Label prefHeight="62.0" prefWidth="67.0" />
+               <Button fx:id="start" onAction="#onStartClick" prefHeight="60.0" prefWidth="160.0" text="Start &gt;&gt;">
+                  <font>
+                     <Font size="25.0" />
+                  </font>
+                  <effect>
+                     <BoxBlur height="0.0" iterations="3" width="0.0">
+                        <input>
+                           <SepiaTone />
+                        </input>
+                     </BoxBlur>
+                  </effect>
+               </Button>
+            </children>
+         </HBox>
+      </VBox>
+      <Button layoutX="38.0" layoutY="40.0" mnemonicParsing="false" onAction="#onFeedbackClick" prefHeight="36.0" prefWidth="158.0" text="Feedback &amp; Help">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Button>
+      <Label layoutX="215.0" layoutY="45.0" text="&lt;-  Tell us your experience here!" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="coolMode" layoutX="730.0" layoutY="25.0" mnemonicParsing="false" onAction="#onCoolModeClick" prefHeight="56.0" prefWidth="143.0" text="Cool Mode">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </RadioButton>
+   </children>
+</AnchorPane>

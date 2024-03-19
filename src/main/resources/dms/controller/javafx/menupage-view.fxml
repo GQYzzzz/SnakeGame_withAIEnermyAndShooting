@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="628.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dms.controller.MenuPageController">
+   <children>
+      <ImageView fx:id="menuBackground" fitHeight="628.0" fitWidth="900.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../game/background/UI-background-menu.jpeg" />
+         </image></ImageView>
+      <Button layoutX="380.0" layoutY="530.0" mnemonicParsing="false" onAction="#onPlayClick" prefHeight="48.0" prefWidth="150.0" text="Play &gt;&gt;">
+         <font>
+            <Font size="26.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Button>
+      <Label fx:id="hiName" layoutX="360.0" layoutY="45.0" prefHeight="59.0" prefWidth="331.0" text="Hi, Betty! " textFill="#ffe500">
+         <font>
+            <Font name="Annai MN Regular" size="36.0" />
+         </font>
+         <effect>
+            <DropShadow radius="4.75" spread="0.8" width="0.0" />
+         </effect>
+      </Label>
+      <Label layoutX="275.0" layoutY="125.0" text="Please choose your preference : " textFill="WHITE">
+         <font>
+            <Font name="Annai MN Regular" size="25.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Label>
+      <Label layoutX="100.0" layoutY="275.0" text="Theme : " textFill="#eb8282">
+         <font>
+            <Font name="Annai MN Regular" size="25.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="cloud" layoutX="220.0" layoutY="270.0" mnemonicParsing="false" onAction="#onCloudThemeClick" text="Cloud" textFill="#fffde1">
+         <font>
+            <Font name="Annai MN Regular" size="25.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="53.0" fitWidth="54.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../game/background/UI-background-cloud.png" />
+               </image></ImageView>
+         </graphic>
+      </CheckBox>
+      <CheckBox fx:id="ice" layoutX="440.0" layoutY="270.0" mnemonicParsing="false" onAction="#onIceThemeClick" text="Ice" textFill="#fffde1">
+         <font>
+            <Font name="Annai MN Regular" size="26.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="53.0" fitWidth="54.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../game/background/UI-background-ice.jpg" />
+               </image></ImageView>
+         </graphic>
+      </CheckBox>
+      <CheckBox fx:id="red" layoutX="660.0" layoutY="270.0" mnemonicParsing="false" onAction="#onRedThemeClick" text="Red" textFill="#fffde1">
+         <font>
+            <Font name="Annai MN Regular" size="25.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="53.0" fitWidth="54.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../game/background/UI-background-red.jpg" />
+               </image></ImageView>
+         </graphic>
+      </CheckBox>
+      <Label layoutX="107.0" layoutY="360.0" text="Snake :" textFill="#eb8282">
+         <font>
+            <Font name="Annai MN Regular" size="25.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="original" layoutX="220.0" layoutY="355.0" mnemonicParsing="false" onAction="#onSnakeOriginalClick" text="Original" textFill="#fffde1">
+         <font>
+            <Font name="Annai MN Regular" size="25.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="53.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../game/snake/snake-head-right.png" />
+               </image></ImageView>
+         </graphic>
+      </CheckBox>
+      <CheckBox fx:id="pikachu" layoutX="440.0" layoutY="355.0" mnemonicParsing="false" onAction="#onSnakePikachuClick" text="Pikachu" textFill="#fffde1">
+         <font>
+            <Font name="Annai MN Regular" size="25.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="53.0" fitWidth="54.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../game/snake/snake-yellow-head.png" />
+               </image></ImageView>
+         </graphic>
+      </CheckBox>
+      <Label layoutX="108.0" layoutY="445.0" text="music : " textFill="#eb8282">
+         <font>
+            <Font name="Annai MN Regular" size="25.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="upbeat" layoutX="220.0" layoutY="440.0" mnemonicParsing="false" onAction="#onUpbeatClick" text="Upbeat" textFill="#fffde1">
+         <font>
+            <Font name="Annai MN Regular" size="25.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="53.0" fitWidth="54.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../game/music/music-logo.png" />
+               </image></ImageView>
+         </graphic>
+      </CheckBox>
+      <CheckBox fx:id="soft" layoutX="440.0" layoutY="440.0" mnemonicParsing="false" onAction="#onSoftClick" text="Soft" textFill="#fffde1">
+         <font>
+            <Font name="Annai MN Regular" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="53.0" fitWidth="54.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../game/music/music-logo.png" />
+               </image></ImageView>
+         </graphic>
+      </CheckBox>
+      <Button layoutX="38.0" layoutY="540.0" mnemonicParsing="false" onAction="#onLogOutClick" prefHeight="35.0" prefWidth="102.0" text="Log out">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Button>
+      <Label layoutX="40.0" layoutY="195.0" text="Game Mode : " textFill="#eb8282">
+         <font>
+            <Font name="Annai MN Regular" size="25.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="easy" layoutX="220.0" layoutY="190.0" mnemonicParsing="false" onAction="#onEasyClick" text="Easy" textFill="#fffde1">
+         <font>
+            <Font name="Annai MN Regular" size="25.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="53.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../game/background/game-logo.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </CheckBox>
+      <CheckBox fx:id="median" layoutX="440.0" layoutY="190.0" mnemonicParsing="false" onAction="#onMedianClick" text="Median" textFill="#fffde1">
+         <font>
+            <Font name="Annai MN Regular" size="25.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="53.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../game/background/game-logo.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </CheckBox>
+      <CheckBox fx:id="hard" layoutX="660.0" layoutY="190.0" mnemonicParsing="false" onAction="#onHardClick" text="Hard" textFill="#fffde1">
+         <font>
+            <Font name="Annai MN Regular" size="25.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="53.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../game/background/game-logo.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </CheckBox>
+      <RadioButton fx:id="humanVoice" layoutX="629.0" layoutY="448.0" mnemonicParsing="false" onAction="#onHumanVoiceClick" text="human voice prompt" textFill="WHITE">
+         <font>
+            <Font name="Annai MN Regular" size="21.0" />
+         </font>
+      </RadioButton>
+   </children>
+</AnchorPane>

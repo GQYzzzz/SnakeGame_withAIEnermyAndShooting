@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dms.controller.RankPageController">
+   <children>
+      <ImageView fitHeight="628.0" fitWidth="900.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../game/background/UI-background-rankBoard.jpeg" />
+         </image></ImageView>
+      <Button layoutX="90.0" layoutY="520.0" mnemonicParsing="false" onAction="#onBackClick" prefHeight="50.0" prefWidth="99.0" text="Back">
+         <font>
+            <Font size="23.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Button>
+      <Label layoutX="345.0" layoutY="160.0" text="[Rank Board]">
+         <font>
+            <Font name="Annai MN Regular" size="28.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7957244655581948" endY="0.9287410926365796" startX="0.7743467933491687" startY="0.2280285035629454">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.5526315569877625" green="0.23282164335250854" blue="0.23282164335250854" opacity="0.949999988079071" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="0.9483407735824585" blue="0.14000000059604645" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ListView fx:id="rankBoard" layoutX="324.0" layoutY="223.0" prefHeight="184.0" prefWidth="216.0" />
+   </children>
+</AnchorPane>

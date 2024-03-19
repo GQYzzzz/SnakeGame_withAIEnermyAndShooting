@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="628.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dms.controller.EndPageController">
+   <children>
+      <ImageView fitHeight="628.0" fitWidth="900.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../game/background/UI-background-end.jpg" />
+         </image></ImageView>
+      <ImageView fitHeight="520.0" fitWidth="530.0" layoutX="187.0" layoutY="35.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../game/background/score-board.png" />
+         </image></ImageView>
+      <Label fx:id="scoreLabel" cache="true" cacheHint="SCALE" layoutX="353.0" layoutY="43.0" prefHeight="46.0" prefWidth="221.0" text="SCORE : 2000" textFill="RED">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="highestScore" layoutX="273.0" layoutY="155.0" prefHeight="44.0" prefWidth="387.0" text="Your highest score :  32000">
+         <font>
+            <Font name="Annai MN Regular" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="235.0" fitWidth="210.0" layoutX="235.0" layoutY="230.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../game/background/board-display.jpg" />
+         </image></ImageView>
+      <ImageView fitHeight="235.0" fitWidth="210.0" layoutX="459.0" layoutY="230.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../game/background/board-display.jpg" />
+         </image></ImageView>
+      <Label layoutX="282.0" layoutY="245.0" text="&lt;Ranking List&gt;" textFill="#cd3b3b">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="502.0" layoutY="245.0" text="&lt;Score History&gt;" textFill="#cd3b3b">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="38.0" layoutY="530.0" mnemonicParsing="false" onAction="#onExitClick" prefHeight="43.0" prefWidth="103.0" text="Exit">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Button>
+      <Button layoutX="744.0" layoutY="530.0" mnemonicParsing="false" onAction="#onLogOutClick" prefHeight="43.0" prefWidth="120.0" text="Log out">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Button>
+      <Button layoutX="277.0" layoutY="480.0" mnemonicParsing="false" onAction="#onMenuClick" prefHeight="43.0" prefWidth="136.0" text="Menu">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Button>
+      <Button layoutX="496.0" layoutY="480.0" mnemonicParsing="false" onAction="#onAgainClick" prefHeight="43.0" prefWidth="127.0" text="Again">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Button>
+      <ListView fx:id="rankList" layoutX="248.0" layoutY="278.0" prefHeight="172.0" prefWidth="182.0">
+         <effect>
+            <SepiaTone />
+         </effect>
+      </ListView>
+      <ListView fx:id="scoreHistory" layoutX="473.0" layoutY="278.0" prefHeight="172.0" prefWidth="183.0">
+         <effect>
+            <SepiaTone />
+         </effect>
+      </ListView>
+   </children>
+</AnchorPane>
